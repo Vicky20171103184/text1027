@@ -6,6 +6,8 @@
 //  Copyright © 2018 s20171103184. All rights reserved.
 //
 
+
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -63,14 +65,20 @@ class ViewController: UIViewController {
         result.text = ""
     }
     
+    @IBAction func buttonSub(_ sender: Any) {
+        operatorFlag = 2
+        temp = Double(result.text!)!
+        result.text = ""
+    }
+    
     @IBAction func buttonMultiply(_ sender: Any) {
-        operatorFlag = 1
+        operatorFlag = 3
         temp = Double(result.text!)!
         result.text = ""
     }
     
     @IBAction func buttonDevide(_ sender: Any) {
-        operatorFlag = 1
+        operatorFlag = 4
         temp = Double(result.text!)!
         result.text = ""
     }
@@ -82,20 +90,17 @@ class ViewController: UIViewController {
             result.text = "\(temp)"
         }
         if operatorFlag == 2{
-            temp = temp + Double(result.text!)!
+            temp = temp - Double(result.text!)!
             result.text = "\(temp)"
         }
-    }
-    
-    @IBAction func buttonSub(_ sender: Any) {
-        operatorFlag = 2
-        temp = Double(result.text!)!
-        result.text = ""
-    }
-    
-    @IBAction func buttonMul(_ sender: Any) {
-        temp = Double(result.text!)!
-        result.text = ""
+        if operatorFlag == 3{
+            temp = temp * Double(result.text!)!
+            result.text = "\(temp)"
+        }
+        if operatorFlag == 4{
+            temp = temp / Double(result.text!)!
+            result.text = "\(temp)"
+        }
     }
     
     @IBAction func buttonAC(_ sender: Any) {
@@ -110,4 +115,3 @@ class ViewController: UIViewController {
 
 
 }
-
