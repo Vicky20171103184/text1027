@@ -91,11 +91,11 @@ class ViewController: UIViewController {
             temp = 1
         }
         else{
-            temp1 = temp1 - Double(show.text!)!
+            temp1 = temp1 * Double(show.text!)!
         }
         show.text = ""
-      //  temp1 = temp1 * Double(show.text!)!
-        //show.text = ""
+  /*      temp1 = temp1 * Double(show.text!)!
+        show.text = ""*/
 
     }
     
@@ -125,13 +125,13 @@ class ViewController: UIViewController {
             
         }
         if operatorFlag == 3{
-            temp1 = temp1 * Double(show.text!)!
+            temp1=temp1*Double(show.text!)!
             show.text = "\(temp1)"
             temp1 = 1
             
         }
         if operatorFlag == 4{
-            temp = temp / Double(show.text!)!
+            temp = temp1 / Double(show.text!)!
             show.text = "\(temp)"
             temp1 = 1
             temp = 0
